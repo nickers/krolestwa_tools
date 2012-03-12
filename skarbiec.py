@@ -20,8 +20,13 @@ dupa = re.sub('<a[^>]+>([^<]+)</a>', '\\1', dupa)
 
 def count_meals(cnt, item):
 	m = {}
+	m[u'kawałki mięsa'] = 1
+	m[u'ryby'] = 1
+	m[u'jarzyny'] = 2
+	m[u'butelki mleka'] = 2
 	m[u'bochenki chleba'] = 3
 	m[u'worki prosa'] = 6
+
 
 	if item in m:
 		return float(cnt) / float(m[item])
